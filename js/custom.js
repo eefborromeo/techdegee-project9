@@ -180,6 +180,15 @@ closeNotif(closeAlert);
       }
     });
 
+// Settings
+function supportsLocalStorage() {
+  try {
+    return 'localStorage' in window && window['localStorage'] !== null
+  } catch(e) {
+    return false;
+  }
+}
+
 function getSettings() {
   var preferredSettings = localStorage.getItem('settingItems');
   if (preferredSettings) {
@@ -200,22 +209,24 @@ function resetSettings() {
 }
 
 window.onload = function() {
-  var settings = getSettings();
-    emailNotif.checked = settings[0];
-    privacy.checked = settings[1];
-    timezone.value = settings[2];
+  if (supportsLocalStorage()) {
+    var settings = getSettings();
+      emailNotif.checked = settings[0];
+      privacy.checked = settings[1];
+      timezone.value = settings[2];
 
-  settingsForm.addEventListener("submit", () => {
-    resetSettings();
-    saveSettings(emailNotif.checked);
-    saveSettings(privacy.checked);
-    saveSettings(timezone.value);
-  });
+    settingsForm.addEventListener("submit", () => {
+      resetSettings();
+      saveSettings(emailNotif.checked);
+      saveSettings(privacy.checked);
+      saveSettings(timezone.value);
+    });
 
-  reset.addEventListener("click", () => {
-    resetSettings();
-    saveSettings(true);
-    saveSettings(true);
-    saveSettings("Select Timezone");
-  });
+    reset.addEventListener("click", () => {
+      resetSettings();
+      saveSettings(true);
+      saveSettings(true);
+      saveSettings("Select Timezone");
+    });
+  };
 };
