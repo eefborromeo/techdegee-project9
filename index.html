@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <title>Web App Dashboard</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/css-toggle-switch@latest/dist/toggle-switch.css" />
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+      <div id="success">
+      </div>
+      <div id="notification-messages">
+        <div class="notification-message"><p>Victoria Chambers commented on YourApp's SEO Tips</p> <span class="close">&times;</span></div>
+        <div class="notification-message"><p>Dan Oliver posted on YourApp's SEO Tips</p> <span class="close">&times;</span></div>
+      </div>
+      <header>
+        <div class="logo">
+          <h1>Your<span>App</span></h1>
+        </div>
+        <div id="notification">
+          <span class="notification-alert"></span>
+          <img src="icons/icon-bell.svg" alt="bell" />
+        </div>
+        <div class="profile">
+          <div class="avatar">
+            <img src="icons/avatar.jpg" alt="avatar" />
+          </div>
+          <div class="name">
+            <h3>Josh Sullivan</h3>
+          </div>
+        </div>
+      </header>
+      <main>
+        <nav id="sidebar">
+          <ul>
+            <li class="dashboard">
+              <div class="icon-container">
+                <img src="icons/icon-dashboard.svg" alt="dashboard" />
+              </div>
+            </li>
+            <li class="members">
+              <div class="icon-container">
+                <img src="icons/icon-members.svg" alt="members"/>
+              </div>
+            </li>
+            <li class="visits">
+              <div class="icon-container">
+                <img src="icons/icon-visits.svg" alt="visits"/>
+              </div>
+            </li>
+            <li class="settings">
+              <div class="icon-container">
+                <img src="icons/icon-settings.svg" alt="settings"/>
+              </div>
+            </li>
+          </ul>
+        </nav>
+        <div id="search">
+          <input type="text" placeholder="Search">
+        </div>
+        <div id="dashboard-title">
+          <h3 class="title">Dashboard</h3>
+        </div>
+        <div id="dashboard">
+          <div class="dashboard-body">
+            <div class="alert">
+              <h4 class="alert-title">Alert</h4>
+              <span class="close-alert">&times;</span>
+              <p class="alert-message">Nullam quis risus eget urna mollis ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit. Curabitur blandit tempus porttitor.</p>
+            </div>
+            <div id="traffic" class="padding border-bottom">
+              <h4 class="title">TRAFFIC</h4>
+              <div id="chart-title">
+                <button id="hour" class="button">Hourly</button>
+                <button id="day" class="button">Daily</button>
+                <button id="week" class="button active">Weekly</button>
+                <button id="month" class="button">Monthly</button>
+              </div>
+              <div class="chart-container">
+                <canvas id="overall-traffic" width="400" height="400">
+                </canvas>
+              </div>
+            </div>
+            <div id="daily-traffic" class="padding border-bottom border-side">
+              <h4 class="title">DAILY TRAFFIC</h4>
+              <div class="chart-container">
+                <canvas id="daily" width="400" height="200">
+                </canvas>
+              </div>
+            </div>
+            <div id="mobile-users" class="padding border-bottom">
+              <h4 class="title">MOBILE USERS</h4>
+              <div class="chart-container">
+                <canvas id="users" width="400" height="200">
+                </canvas>
+              </div>
+            </div>
+            <div id="social-stats" class="padding border-bottom">
+              <h4 class="title">SOCIAL STATS</h4>
+              <div id="twitter" class="stat-box">
+                <div class="stat-box-container">
+                  <div class="icon-container">
+                    <img src="icons/icon-twitter.svg" alt="Twitter" />
+                  </div>
+                  <div class="stats">
+                    <div class="stats-header">
+                      <h5>Twitter</h5>
+                    </div>
+                    <div class="stats-info">
+                      <p>10,345</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="facebook" class="stat-box">
+                <div class="stat-box-container">
+                  <div class="icon-container">
+                    <img src="icons/icon-facebook.svg" alt="Facebook"/>
+                  </div>
+                  <div class="stats">
+                    <div class="stats-header">
+                      <h5>Facebook</h5>
+                    </div>
+                    <div class="stats-info">
+                      <p>8,739</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="google-plus" class="stat-box">
+                <div class="stat-box-container">
+                  <div class="icon-container">
+                    <img src="icons/icon-google-plus.svg" alt="Google Plus" />
+                  </div>
+                  <div class="stats">
+                    <div class="stats-header">
+                      <h5>Google+</h5>
+                    </div>
+                    <div class="stats-info">
+                      <p>2,530</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="new-members" class="padding border-bottom border-side">
+              <h4 class="title">NEW MEMBERS</h4>
+              <div class="new-user">
+                <div class="avatar">
+                  <div class="icon-container">
+                    <img src="icons/avatar-1.jpg" alt="User's avatar">
+                  </div>
+                </div>
+                <div class="username">
+                  <h4>Victoria Chambers</h4>
+                </div>
+                <div class="date">
+                  <p>10/15/15</p>
+                </div>
+                <div class="email">
+                  <p>victoria.chambers80@example.com</p>
+                </div>
+              </div>
+              <div class="new-user">
+                <div class="avatar">
+                  <div class="icon-container">
+                    <img src="icons/avatar-3.jpg" alt="User's avatar">
+                  </div>
+                </div>
+                <div class="username">
+                  <h4>Dale Byrd</h4>
+                </div>
+                <div class="date">
+                  <p>10/15/15</p>
+                </div>
+                <div class="email">
+                  <p>dale.byrd52@example.com</p>
+                </div>
+              </div>
+              <div class="new-user">
+                <div class="avatar">
+                  <div class="icon-container">
+                    <img src="icons/avatar-2.jpg" alt="User's avatar">
+                  </div>
+                </div>
+                <div class="username">
+                  <h4>Dawn Wood</h4>
+                </div>
+                <div class="date">
+                  <p>10/15/15</p>
+                </div>
+                <div class="email">
+                  <p>dawn.wood16@example.com</p>
+                </div>
+              </div>
+              <div class="new-user">
+                <div class="avatar">
+                  <div class="icon-container">
+                    <img src="icons/avatar-4.jpg" alt="User's avatar">
+                  </div>
+                </div>
+                <div class="username">
+                  <h4>Dan Oliver</h4>
+                </div>
+                <div class="date">
+                  <p>10/15/15</p>
+                </div>
+                <div class="email">
+                  <p>dan.oliver82@example.com</p>
+                </div>
+              </div>
+            </div>
+            <div id="recent-activity" class="padding border-bottom">
+              <h4 class="title">RECENT ACTIVITY</h4>
+              <div class="user">
+                <div class="avatar">
+                  <div class="icon-container">
+                    <img src="icons/avatar-1.jpg" alt="User's avatar">
+                  </div>
+                </div>
+                <div class="username-info">
+                  <div class="username">
+                    <h4>Victoria Chambers</h4>
+                  </div>
+                  <div class="info">
+                    <p>commented on YourApp's SEO Tips</p>
+                  </div>
+                </div>
+                <div class="activity-time">
+                  <p>4 hours ago</p>
+                </div>
+                <div class="arrow"></div>
+              </div>
+              <div class="user">
+                <div class="avatar">
+                  <div class="icon-container">
+                    <img src="icons/avatar-3.jpg" alt="User's avatar">
+                  </div>
+                </div>
+                <div class="username-info">
+                  <div class="username">
+                    <h4>Dale Byrd</h4>
+                  </div>
+                  <div class="info">
+                    <p>like the post Facebook's Changes for 2016</p>
+                  </div>
+                </div>
+                <div class="activity-time">
+                  <p>5 hours ago</p>
+                </div>
+                <div class="arrow"></div>
+              </div>
+              <div class="user">
+                <div class="avatar">
+                  <div class="icon-container">
+                    <img src="icons/avatar-2.jpg" alt="User's avatar">
+                  </div>
+                </div>
+                <div class="username-info">
+                  <div class="username">
+                    <h4>Dawn Wood</h4>
+                  </div>
+                  <div class="info">
+                    <p>commented on Facebook's Changes for 2016</p>
+                  </div>
+                </div>
+                <div class="activity-time">
+                  <p>5 hours ago</p>
+                </div>
+                <div class="arrow"></div>
+              </div>
+              <div class="user">
+                <div class="avatar">
+                  <div class="icon-container">
+                    <img src="icons/avatar-4.jpg" alt="User's avatar">
+                  </div>
+                </div>
+                <div class="username-info">
+                  <div class="username">
+                    <h4>Dan Oliver</h4>
+                  </div>
+                  <div class="info">
+                    <p>posted YourApp's SEO Tips</p>
+                  </div>
+                </div>
+                <div class="activity-time">
+                  <p>1 day ago</p>
+                </div>
+                <div class="arrow"></div>
+              </div>
+            </div>
+            <div id="message-user" class="padding border-side">
+              <h4 class="title">MESSAGE USER</h4>
+              <form novalidate>
+                <div class="autocomplete">
+                  <input type="search" name="user-search" id="search-user" class="valid" placeholder="Search for User" autocomplete="off" />
+                  <label for="search-user">Search Members</label>
+                </div>
+                <textarea name="message" id="message" class="valid" rows="8" placeholder="Message for User"></textarea>
+                <label for="message">Message</label>
+                <span id="username" class="hide-message" aria-live="polite"></span>
+                <div id="send" class="button">
+                  <button>SEND</button>
+                </div>
+              </form>
+            </div>
+            <div id="settings" class="padding">
+              <h4 class="title">SETTINGS</h4>
+              <form novalidate>
+                <p class="email-title">Send Email Notificiations</p>
+                <label class="switch-light switch-ios email-switch" onclick="">
+                <input id="email-notification" type="checkbox" checked>
+                <span>
+                  <span>Off</span>
+                  <span>On</span>
+                  <a></a>
+                </span>
+                </label>
+                <p class="privacy-title">Set Profile to Public</p>
+                <label class="switch-light switch-ios privacy-switch" onclick="">
+                <input id="privacy-setting" type="checkbox" checked>
+                <span>
+                  <span>Off</span>
+                  <span>On</span>
+                  <a></a>
+                </span>
+                </label>
+                <select id="time" name="timezone">
+                  <option value="Select Timezone">Select Timezone</option>
+                  <option value="-12.0">(GMT -12:00) Eniwetok, Kwajalein</option>
+                  <option value="-11.0">(GMT -11:00) Midway Island, Samoa</option>
+                  <option value="-10.0">(GMT -10:00) Hawaii</option>
+                  <option value="-9.0">(GMT -9:00) Alaska</option>
+                  <option value="-8.0">(GMT -8:00) Pacific Time (US &amp; Canada)</option>
+                  <option value="-7.0">(GMT -7:00) Mountain Time (US &amp; Canada)</option>
+                  <option value="-6.0">(GMT -6:00) Central Time (US &amp; Canada), Mexico City</option>
+                  <option value="-5.0">(GMT -5:00) Eastern Time (US &amp; Canada), Bogota, Lima</option>
+                  <option value="-4.0">(GMT -4:00) Atlantic Time (Canada), Caracas, La Paz</option>
+                  <option value="-3.5">(GMT -3:30) Newfoundland</option>
+                  <option value="-3.0">(GMT -3:00) Brazil, Buenos Aires, Georgetown</option>
+                  <option value="-2.0">(GMT -2:00) Mid-Atlantic</option>
+                  <option value="-1.0">(GMT -1:00 hour) Azores, Cape Verde Islands</option>
+                  <option value="0.0">(GMT) Western Europe Time, London, Lisbon, Casablanca</option>
+                  <option value="1.0">(GMT +1:00 hour) Brussels, Copenhagen, Madrid, Paris</option>
+                  <option value="2.0">(GMT +2:00) Kaliningrad, South Africa</option>
+                  <option value="3.0">(GMT +3:00) Baghdad, Riyadh, Moscow, St. Petersburg</option>
+                  <option value="3.5">(GMT +3:30) Tehran</option>
+                  <option value="4.0">(GMT +4:00) Abu Dhabi, Muscat, Baku, Tbilisi</option>
+                  <option value="4.5">(GMT +4:30) Kabul</option>
+                  <option value="5.0">(GMT +5:00) Ekaterinburg, Islamabad, Karachi, Tashkent</option>
+                  <option value="5.5">(GMT +5:30) Bombay, Calcutta, Madras, New Delhi</option>
+                  <option value="5.75">(GMT +5:45) Kathmandu</option>
+                  <option value="6.0">(GMT +6:00) Almaty, Dhaka, Colombo</option>
+                  <option value="7.0">(GMT +7:00) Bangkok, Hanoi, Jakarta</option>
+                  <option value="8.0">(GMT +8:00) Beijing, Perth, Singapore, Hong Kong</option>
+                  <option value="9.0">(GMT +9:00) Tokyo, Seoul, Osaka, Sapporo, Yakutsk</option>
+                  <option value="9.5">(GMT +9:30) Adelaide, Darwin</option>
+                  <option value="10.0">(GMT +10:00) Eastern Australia, Guam, Vladivostok</option>
+                  <option value="11.0">(GMT +11:00) Magadan, Solomon Islands, New Caledonia</option>
+                  <option value="12.0">(GMT +12:00) Auckland, Wellington, Fiji, Kamchatka</option>
+                </select>
+                <div class="button">
+                  <button type="submit">SAVE</button>
+                </div>
+                <div class="cancel-button">
+                  <button id="reset" type="reset">CANCEL</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </main>
+      <script src="js/charts.js"></script>
+      <script src="js/custom.js"></script>
+    </body>
+</html>

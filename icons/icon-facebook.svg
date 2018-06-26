@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+
+<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+	 viewBox="0 0 100 100" style="enable-background:new 0 0 32 32;" xml:space="preserve">
+
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="102" width="102" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <ellipse stroke="null" ry="48.5" rx="48" id="svg_2" cy="49.63043" cx="50.5" stroke-opacity="null" stroke-width="null" fill="#786fc1"/>
+  <path fill="#ffffff" id="svg_1" d="m60.43,42.739l-7.645,0l0,-5.014c0,-1.883 1.248,-2.322 2.127,-2.322c0.877,0 5.395,0 5.395,0l0,-8.278l-7.43,-0.029c-8.248,0 -10.125,6.174 -10.125,10.125l0,5.518l-4.77,0l0,8.53l4.77,0c0,10.947 0,24.137 0,24.137l10.033,0c0,0 0,-13.32 0,-24.137l6.77,0l0.875,-8.53z"/>
+ </g>
+</svg>
