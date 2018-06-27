@@ -108,6 +108,7 @@ Chart.defaults.global.elements.arc.borderWidth = 0;
         ]
       },
       options: {
+        maintainAspectRatio: false,
         scales: {
           xAxes: [{
             ticks: {
@@ -171,6 +172,7 @@ Chart.defaults.global.elements.arc.borderWidth = 0;
         labels: mobileUsersLabels
       },
       options: {
+        maintainAspectRatio: false,
         legend: {
           position: 'right',
           labels: {
