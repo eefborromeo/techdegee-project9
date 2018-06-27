@@ -93,7 +93,7 @@ header {
   position: absolute;
   top: 13%;
   width: 100%;
-  height: 25vh;
+  height: auto;
   display: grid;
   grid-template-rows: 50% 50%;
 }
@@ -311,9 +311,12 @@ main {
   margin: auto;
 }
 
-#daily-traffic .chart-container,
-#mobile-users .chart-container {
+#daily-traffic .chart-container {
   height: 25vh;
+}
+
+#mobile-users .chart-container {
+  height: 35vh;
 }
 
 
@@ -920,7 +923,6 @@ main {
   }
 
   #notification-messages {
-    height: 15vh;
     top: 12.5%;
     right: 0;
     width: 50%;
@@ -944,6 +946,7 @@ main {
 
   .notification-message p {
     font-size: .85rem;
+    align-self: center;
   }
 
   .notification-message ~ div {
@@ -1055,7 +1058,6 @@ main {
   #daily-traffic .chart-container,
   #mobile-users .chart-container {
     width: 100%;
-    height: 100%;
   }
 
   #daily-traffic {
@@ -1071,6 +1073,7 @@ main {
     padding: 0 5% 2.5% !important;
     display: grid;
     grid-template-columns: 33.33% 33.33% 33.33%;
+    grid-template-rows: auto;
     grid-template-areas:
     "title title title"
     "twitter facebook google"
