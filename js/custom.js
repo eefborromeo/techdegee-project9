@@ -14,6 +14,7 @@ var validUser = document.getElementById('username');
 var message = document.getElementById('message');
 var messageForm = document.getElementsByTagName('form')[0];
 var success = document.getElementById('success');
+var successMessage = document.getElementsByClassName('success-message');
 var closeSuccess = document.getElementsByClassName('close-success');
 
 // Settings
@@ -30,6 +31,14 @@ function closeNotif(a) {
         this.parentNode.remove();
     });
   }
+}
+
+// Close Success Message Function
+function closeSuccessMessage() {
+  closeSuccess[0].addEventListener('click', function() {
+      success.style.visibility = "hidden";
+      this.parentNode.remove();
+  });
 }
 
 // Autocomplete Function
@@ -175,9 +184,10 @@ closeNotif(closeAlert);
         search.value = "";
         message.value = "";
         e.preventDefault();
-        closeNotif(closeSuccess);
+        closeSuccessMessage();
       }
     });
+
 
 // Settings
 function supportsLocalStorage() {
