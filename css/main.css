@@ -7,10 +7,15 @@
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
 }
 
@@ -43,14 +48,14 @@ textarea:focus::placeholder {
 
 .button button,
 .cancel-button button {
-  background-color: #786FC1;
+  background-color: #786fc1;
   border: none;
   border-radius: 5px;
-  color: #FFF;
+  color: #fff;
   font-weight: 400;
   padding: 10px;
   width: 100%;
-  letter-spacing: .8px;
+  letter-spacing: 0.8px;
 }
 
 .cancel-button button {
@@ -138,7 +143,6 @@ header {
   padding: 10px;
 }
 
-
 .notification-message p {
   grid-area: notification;
   color: #fff;
@@ -151,7 +155,6 @@ header {
   font-size: 1.3rem;
   cursor: pointer;
 }
-
 
 /* PROFILE */
 
@@ -181,10 +184,10 @@ main {
   grid-template-rows: 10vh 10vh 10vh 70vh;
   grid-template-columns: 100%;
   grid-template-areas:
-  "sidebar"
-  "search"
-  "title"
-  "dashboard";
+    "sidebar"
+    "search"
+    "title"
+    "dashboard";
 }
 
 /* SIDEBAR  */
@@ -205,7 +208,6 @@ main {
   display: grid;
   align-items: center;
 }
-
 
 /* SEARCH */
 #search {
@@ -256,15 +258,15 @@ main {
   grid-template-columns: auto auto 10%;
   grid-row-gap: 10px;
   grid-template-areas:
-  "title . close"
-  "alert alert alert"
+    "title . close"
+    "alert alert alert";
 }
 
 #dashboard .alert-title {
   grid-area: title;
 }
 
-#dashboard .close-alert{
+#dashboard .close-alert {
   grid-area: close;
   text-align: center;
   font-size: 1.3rem;
@@ -319,9 +321,6 @@ main {
   height: 35vh;
 }
 
-
-
-
 /* SOCIAL STATS  */
 
 #social-stats .stat-box {
@@ -345,7 +344,6 @@ main {
   font-size: 1.5rem;
   color: #8379c7;
 }
-
 
 .stat-box .stat-box-container .stats-info {
   font-size: 2.5rem;
@@ -375,9 +373,9 @@ main {
   grid-template-rows: 100%;
   grid-column-gap: 10px;
   grid-template-areas:
-  "avatar username"
-  "avatar date"
-  "avatar email";
+    "avatar username"
+    "avatar date"
+    "avatar email";
   padding: 10px;
 }
 
@@ -418,7 +416,7 @@ main {
 
 #new-members .new-user .email p {
   color: #9e96d0;
-  font-size: .7rem;
+  font-size: 0.7rem;
 }
 
 /* RECENT ACTIVITY */
@@ -429,16 +427,16 @@ main {
   grid-template-rows: 100%;
   grid-column-gap: 10px;
   grid-template-areas:
-  "avatar username-info arrow"
-  "avatar date arrow";
+    "avatar username-info arrow"
+    "avatar date arrow";
   padding: 10px;
 }
 
 #recent-activity .user .username-info {
   display: grid;
   grid-template-areas:
-  "username"
-  "info";
+    "username"
+    "info";
 }
 
 #recent-activity .user .info {
@@ -446,7 +444,7 @@ main {
 }
 
 #recent-activity .user .activity-time {
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 .arrow {
@@ -459,10 +457,10 @@ main {
 }
 
 .arrow::before {
-  content: '';
+  content: "";
   width: 100%;
   height: 100%;
-  border-width: .6vmin .6vmin 0 0;
+  border-width: 0.6vmin 0.6vmin 0 0;
   border-style: solid;
   border-color: #997dc8;
   display: block;
@@ -488,7 +486,7 @@ main {
   box-sizing: border-box;
 }
 
-#message-user input[type=search]::placeholder,
+#message-user input[type="search"]::placeholder,
 #message-user textarea::placeholder {
   font-weight: 100;
 }
@@ -536,7 +534,7 @@ main {
   top: 3px;
   width: 1.65em;
   height: 1.65em;
-  border: 0.15em solid #D8D9DB;
+  border: 0.15em solid #d8d9db;
 }
 
 #settings select {
@@ -582,7 +580,7 @@ main {
 
 .invalid {
   border-color: #900 !important;
-  background-color: #FDD !important;
+  background-color: #fdd !important;
 }
 
 .invalid:focus {
@@ -632,8 +630,6 @@ main {
   font-size: 1.2rem;
   cursor: pointer;
 }
-
-
 
 /***************
   MEDIA QUERIES
@@ -704,8 +700,8 @@ main {
     grid-template-columns: 50% 50%;
     grid-row-gap: 1.5rem;
     grid-template-areas:
-    "title chart-title"
-    "chart chart"
+      "title chart-title"
+      "chart chart";
   }
 
   #traffic .title {
@@ -760,8 +756,8 @@ main {
     grid-template-columns: 33.33% 33.33% 33.33%;
     grid-column-gap: 10px;
     grid-template-areas:
-    "title . ."
-    "twitter facebook google";
+      "title . ."
+      "twitter facebook google";
   }
 
   #social-stats #twitter {
@@ -802,8 +798,8 @@ main {
     grid-template-columns: 10% auto 20%;
     grid-column-gap: 0;
     grid-template-areas:
-    "avatar username date"
-    "avatar email .";
+      "avatar username date"
+      "avatar email .";
   }
 
   #new-members .new-user .username,
@@ -811,7 +807,7 @@ main {
     align-self: end;
   }
 
-  #new-members .new-user .date{
+  #new-members .new-user .date {
     text-align: right;
   }
 
@@ -828,8 +824,7 @@ main {
 
   #recent-activity .user .username-info {
     grid-template-columns: minmax(min-content, max-content);
-    grid-template-areas:
-    "username info";
+    grid-template-areas: "username info";
     grid-column-gap: 5px;
     align-items: end;
   }
@@ -851,10 +846,10 @@ main {
     grid-template-rows: 20% 10% 30% auto;
     align-items: center;
     grid-template-areas:
-    "email-notifs email-switch"
-    "privacy privacy-switch"
-    "timezone timezone"
-    "save cancel"
+      "email-notifs email-switch"
+      "privacy privacy-switch"
+      "timezone timezone"
+      "save cancel";
   }
 
   #settings .title {
@@ -903,7 +898,6 @@ main {
   #settings .cancel-button {
     margin-left: auto;
   }
-
 }
 
 @media screen and (min-width: 1024px) {
@@ -945,7 +939,7 @@ main {
   }
 
   .notification-message p {
-    font-size: .85rem;
+    font-size: 0.85rem;
     align-self: center;
   }
 
@@ -960,10 +954,10 @@ main {
 
   main {
     grid-template-columns: 8% 14% 78%;
-    grid-template-rows: 100%;
+    grid-template-rows: auto;
     grid-template-areas:
-    "sidebar title search"
-    "sidebar dashboard dashboard"
+      "sidebar title search"
+      "sidebar dashboard dashboard";
   }
 
   #sidebar ul {
@@ -988,14 +982,13 @@ main {
   #search {
     border-left: 2px solid #dfdfdf;
     justify-content: flex-end;
-
   }
 
   #search input {
     padding: 7px;
     margin-right: 20px;
     width: 60%;
-    border: 1px solid #dfdfdf
+    border: 1px solid #dfdfdf;
   }
 
   #dashboard .padding {
@@ -1014,14 +1007,13 @@ main {
   #dashboard .dashboard-body {
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 10% 20% 20% 10% 25% 25%;
     grid-template-areas:
-    "alert alert"
-    "traffic traffic"
-    "daily users"
-    "stats stats"
-    "members activity"
-    "message settings"
+      "alert alert"
+      "traffic traffic"
+      "daily users"
+      "stats stats"
+      "members activity"
+      "message settings";
   }
 
   #dashboard .alert {
@@ -1032,13 +1024,12 @@ main {
     display: grid;
     grid-template-columns: 4% 92% 4%;
     grid-column-gap: 5px;
-    grid-template-areas:
-    "title alert close";
+    grid-template-areas: "title alert close";
   }
 
   #dashboard .alert .alert-title,
   #dashboard .alert .alert-message {
-    font-size: .80rem;
+    font-size: 0.8rem;
   }
 
   #dashboard .alert .alert-title h4 {
@@ -1052,7 +1043,7 @@ main {
   }
 
   #traffic .title {
-    margin:
+    margin: ;
   }
 
   #daily-traffic .chart-container,
@@ -1075,8 +1066,8 @@ main {
     grid-template-columns: 33.33% 33.33% 33.33%;
     grid-template-rows: auto;
     grid-template-areas:
-    "title title title"
-    "twitter facebook google"
+      "title title title"
+      "twitter facebook google";
   }
 
   #social-stats .title {
@@ -1091,7 +1082,7 @@ main {
   #new-members .username h4,
   #recent-activity .user .username h4,
   #recent-activity .user .info p {
-    font-size: .80rem;
+    font-size: 0.8rem;
   }
 
   #new-members {
@@ -1106,7 +1097,7 @@ main {
   }
 
   #new-members .date {
-    font-size: .80rem;
+    font-size: 0.8rem;
   }
 
   #recent-activity {
@@ -1135,7 +1126,7 @@ main {
   }
 
   .arrow::before {
-    border-width: .4vmin .4vmin 0 0;
+    border-width: 0.4vmin 0.4vmin 0 0;
   }
 
   #message-user {
