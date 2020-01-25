@@ -181,7 +181,7 @@ header {
 
 main {
   display: grid;
-  grid-template-rows: 10vh 10vh 10vh 70vh;
+  grid-template-rows: 10vh 12vh 10vh 68vh;
   grid-template-columns: 100%;
   grid-template-areas:
     "sidebar"
