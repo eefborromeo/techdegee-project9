@@ -369,7 +369,7 @@ main {
 #new-members .new-user {
   display: grid;
   grid-template-columns: 20% 80%;
-  grid-template-rows: 100%;
+  grid-template-rows: auto;
   grid-column-gap: 10px;
   grid-template-areas:
     "avatar username"
@@ -423,7 +423,7 @@ main {
 #recent-activity .user {
   display: grid;
   grid-template-columns: 20% 70% 10%;
-  grid-template-rows: 100%;
+  grid-template-rows: auto;
   grid-column-gap: 10px;
   grid-template-areas:
     "avatar username-info arrow"
@@ -644,6 +644,10 @@ main {
     padding: 15px 20px;
   }
 
+  main {
+    grid-template-rows: 9vh 8vh 3vh 80vh;
+  }
+
   /* NOTIFICATION */
 
   #notification {
@@ -653,8 +657,8 @@ main {
   .notification-alert {
     width: 9px;
     height: 9px;
-    top: 2.5%;
-    left: 71%;
+    top: 4.25%;
+    left: 71.25%;
   }
 
   .notification-message {
@@ -751,7 +755,6 @@ main {
 
   #social-stats {
     display: grid;
-    grid-template-rows: 5% 95%;
     grid-template-columns: 33.33% 33.33% 33.33%;
     grid-column-gap: 10px;
     grid-template-areas:
@@ -839,10 +842,13 @@ main {
     width: 45%;
   }
 
+  #settings {
+    height: 65vh;
+  }
+
   #settings form {
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 20% 10% 30% auto;
     align-items: center;
     grid-template-areas:
       "email-notifs email-switch"
@@ -928,8 +934,8 @@ main {
   .notification-alert {
     width: 8px;
     height: 8px;
-    top: 3.8%;
-    left: 82%;
+    top: 3.25%;
+    left: 82.3%;
   }
 
   .notification-message {
@@ -1038,7 +1044,7 @@ main {
   #traffic {
     grid-area: traffic;
     grid-row-gap: 0;
-    padding: 0 1% 2% 2% !important;
+    padding: 0 1% 2% 1% !important;
   }
 
   #traffic .title {
